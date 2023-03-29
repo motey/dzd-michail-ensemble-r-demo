@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  mysql:
+    image: mysql:8
+    # atm we are fixed to 10.5 because of https://help.nextcloud.com/t/update-to-next-cloud-21-0-2-has-get-an-error/117028/14 keep eye on post and https://github.com/nextcloud/server/issues/27085
+    container_name: ensemble_mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=ensemble
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./import:/import
+    healthcheck:
+      test: mysql -u root --password=$$MYSQL_ROOT_PASSWORD -e "select 1 from dual;"
+      interval: 5s
+      timeout: 10s
+      retries: 10

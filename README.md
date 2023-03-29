@@ -4,8 +4,8 @@
 ## Run on linux bash
 
 requierments:
-    * curl
-    * docker with `docker compose`
+* curl
+* docker with `docker compose`
     
 
 `git clone git@github.com:motey/dzd-michail-ensemble-r-demo.git`

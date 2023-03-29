@@ -1,5 +1,15 @@
 # dzd-michail-ensemble-r-demo
 
+This is just a little debug script. If you came here by accident and you dont know what this all means you probablly wont need it.
+
+We start a sql database and try to load the enemble data for [homo_sapiens_core_109_38](https://ftp.ensembl.org/pub/current_mysql/homo_sapiens_core_109_38)
+
+based on 
+
+https://www.ensembl.org/info/docs/webcode/mirror/install/ensembl-data.html
+
+
+State: uncomplete: Only the data structure is created atm
 
 ## Run on linux bash
 
